@@ -25,6 +25,7 @@ class _SplashViewState extends State<SplashView> {
           children: [
             Container(
               width: 180,
+              height: 180,
               child: Image.asset("assets/images/splash_cloud.png"),
             ),
             Row(),
