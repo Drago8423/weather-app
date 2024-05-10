@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:weather/modules/dashboard/views/homepage.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -8,6 +11,15 @@ class SplashView extends StatefulWidget {
 }
 
 class _SplashViewState extends State<SplashView> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(Duration(seconds: 2), () {
+      Navigator.of(context)
+          .pushReplacement(MaterialPageRoute(builder: (_) => homePage()));
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
